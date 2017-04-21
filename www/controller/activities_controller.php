@@ -77,8 +77,8 @@ foreach ($activities as $activity) {
 					  </div>
 					  <div id="text">
 					    <h2>'.$activity['Activity_Name'].'</h2>
-					    <p class="right"><strong>'.$activity['Number_Of_Participants'].'</strong> participant(s) | <strong>'.$activity['Remaining_Places'].'</strong> place(s) disponible </p>
-					    <p>Descriptif de l\'activité : <strong>'.$activity['Activity_Description'].'</strong> <br> Lieu : <strong>'.$activity['Activity_Place'].'</strong> <br> Date : <strong>'.substr($activity['Date_Event'],0,10).'</strong><br>Heure : <strong>'.substr($activity['Date_Event'],10,6).'</strong><br>'.$activity['Votes'];
+					    <p class="right">Actually <strong>'.$activity['Number_Of_Participants'].'</strong> participant(s) | <strong>'.$activity['Remaining_Places'].'</strong> place(s) available </p>
+					    <p>Activity description : <strong>'.$activity['Activity_Description'].'</strong> <br> Place : <strong>'.$activity['Activity_Place'].'</strong> <br> Date : <strong>'.substr($activity['Date_Event'],0,10).'</strong><br>Time : <strong>'.substr($activity['Date_Event'],10,6).'</strong><br>'.$activity['Votes'];
 
 					    
 					    if(isset($_SESSION['vote'][$activity['Id_Activity']])){
@@ -111,11 +111,11 @@ foreach ($activities as $activity) {
 
 					    if(intval($activity['Votes']) > 9 && $activity['Remaining_Places'] > 0 && $participate == 0){
 
-					    	$html_activities .= '<button onclick="location.href=\'activities.php?participate&id_activity='.$activity['Id_Activity'].'\'" class="add_to_cart">Je participe</button>';
+					    	$html_activities .= '<button onclick="location.href=\'activities.php?participate&id_activity='.$activity['Id_Activity'].'\'" class="add_to_cart">I subscribe !</button>';
 
 					    }else if($participate == 1){
 
-					    	$html_activities .= '<button onclick="location.href=\'activities.php?remove&id_activity='.$activity['Id_Activity'].'\'" class="add_to_cart">Me désinscrire</button>';
+					    	$html_activities .= '<button onclick="location.href=\'activities.php?remove&id_activity='.$activity['Id_Activity'].'\'" class="add_to_cart">Unsubscribe</button>';
 
 					    }
 
@@ -133,7 +133,7 @@ foreach ($activities as $activity) {
 
 }
 
-$html_activities .= "<br><br><h1>Activitées passées</h1>";
+$html_activities .= "<br><br><h1>Past pactivities</h1>";
 
 foreach ($past_activities as $past_activity) {
 
@@ -147,12 +147,12 @@ foreach ($past_activities as $past_activity) {
 					  </div>
 					  <div id="text">
 					    <h2>'.$past_activity['Activity_Name'].'</h2>
-					    <p class="right">Il y avait <strong>'.$past_activity['Number_Of_Participants'].'</strong> participant(s) | Il restait <strong>'.$past_activity['Remaining_Places'].'</strong> place(s) </p>
-					    <p>Descriptif de l\'activité : <strong>'.$past_activity['Activity_Description'].'</strong> <br> Lieu : <strong>'.$past_activity['Activity_Place'].'</strong> <br> Date : <strong>'.substr($past_activity['Date_Event'],0,10).'</strong><br>Heure : <strong>'.substr($past_activity['Date_Event'],10,6).'</strong><br>
+					    <p class="right">There were <strong>'.$past_activity['Number_Of_Participants'].'</strong> participant(s) | <strong>'.$past_activity['Remaining_Places'].'</strong> place(s) were available</p>
+					    <p>Activity description : <strong>'.$past_activity['Activity_Description'].'</strong> <br> Place : <strong>'.$past_activity['Activity_Place'].'</strong> <br> Date : <strong>'.substr($past_activity['Date_Event'],0,10).'</strong><br>Time : <strong>'.substr($past_activity['Date_Event'],10,6).'</strong><br>
 
 					    <p class="right">
 
-					    Le prix était de <strong>'.$past_activity['Activity_Price'].'€</strong><br><br><br><br>';
+					    Price was <strong>'.$past_activity['Activity_Price'].'€</strong><br><br><br><br>';
 
 					    $check_participation->execute(array(
 					    	':idu' => $_SESSION['id'],

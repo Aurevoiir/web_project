@@ -19,8 +19,8 @@ if(isset($_GET['error'])){
   		<div class="form">
     	<form class="register-form" method="GET">
     	<h2>SIGN UP</h2>
-      	<input type="text" name='name' placeholder="Name"/>
-      	<input type="text" name='surname' placeholder="Surname"/>
+      	<input type="text" name='name' placeholder="Name" required />
+      	<input type="text" name='surname' placeholder="Surname" required />
 			<div>
 			<label class="ecole">
 			</label>
@@ -41,9 +41,9 @@ if(isset($_GET['error'])){
    </label>
   </div>
 </label>
-      <input type="text" name='emails' placeholder="email"/>
-      <input type="password" name='password' placeholder="Password"/>
-      <input type="password" name='password_confirmation' placeholder="Confirm password"/>
+      <input type="email" name='emails' placeholder="email"/ required>
+      <input type="password" name='password' placeholder="Password"/ required>
+      <input type="password" name='password_confirmation' placeholder="Confirm password"/ required>
       <button>SIGN UP</button>
       <p class="message">Alreary Registered ? <a href="#">Sign in</a></p>
     </form>

@@ -96,6 +96,8 @@ include 'controller/activities_controller.php';
 				</div>
 			</div>
 		</div>
+
+		<nav style="text-align: center;"><button onclick="location.href='controller/add_activity_form.php'" class='add_to_cart'>Add an activity</button></nav>
 		
 	<div class="technology">
 

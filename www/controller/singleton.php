@@ -7,7 +7,7 @@ session_start();
 
 
 try {
-    $conn = new PDO('mysql:host=localhost;charset=utf8;dbname=Web_Project', "root", "root");
+    $conn = new PDO('mysql:host=localhost;charset=utf8;dbname=Web_Project', "root", "");
 }catch (PDOException $e) {
     print "Erreur !: " . $e->getMessage() . "<br/>";
     die();

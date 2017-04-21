@@ -7,7 +7,7 @@ include 'controller/profile_controller.php'
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Titre</title>
+<title>Profile</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Style Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -68,8 +68,8 @@ table.activities td {
 	<div class="header-bottom">
 		<div class="container">
 			<div class="logo">
-				<h1><a href="index.html">BDE CESI</a></h1>
-				<p><label class="of"></label>Blablabla<label class="on"></label></p>
+				<h1><a href="index.html">PROFILE</a></h1>
+				<p><label class="of"></label>LET'S MAKE A PERFECT STYLE<label class="on"></label></p>
 			</div>
 		</div>
 	</div>
@@ -100,12 +100,12 @@ table.activities td {
 					</div>
 					
 					<div class="welcome-bottom">
-						<h2 class="w3">Profil</h2>
-						<p><b>Nom</b> : <?php echo $surname; ?> </p>
-						<p><b>Prénom</b> : <?php echo $name; ?> </p>
-						<p><b>Spécialité</b> : <?php echo $studies; ?> </p>
-						<p><b>email</b> : <?php echo $email; ?> </p>
-						<button type="button" class="add_to_cart">Modifier mes informations</button>
+						<h2 class="w3">Profile</h2>
+						<p><b>Surname</b> : <?php echo $surname; ?> </p>
+						<p><b>Name</b> : <?php echo $name; ?> </p>
+						<p><b>Speciality</b> : <?php echo $studies; ?> </p>
+						<p><b>@mail</b> : <?php echo $email; ?> </p>
+						<button type="button" class="add_to_cart">Modify personnal informations</button>
 						<br><br><br><br><br><br>
 					</div>
 				</div>
@@ -123,7 +123,7 @@ table.activities td {
 				<div class="welcome-top heading">
 					
 					<div class="welcome-bottom">
-						<h2 class="w3">Mes activités</h2>
+						<h2 class="w3">My activities</h2>
 						<br><br>
 
 						<?php 
@@ -148,7 +148,7 @@ table.activities td {
 				<div class="welcome-top heading">
 					
 					<div class="welcome-bottom">
-						<h2 class="w3">Mes commandes</h2>
+						<h2 class="w3">My orders</h2>
 						<br><br>
 
 						<?php 
@@ -167,13 +167,14 @@ table.activities td {
 </div>
 		<div class="footer">
 			<div class="container">
+
 				<div class="clearfix"></div>
 			</div>
 		</div>
 		<div class="copyright">
 					<div class="container">
-						<p>© 2017 BDE CESI. All rights reserved | Designed by Exia CESI Orleans</p>
+						<p>© 2017 BDE CESI. All rights reserved | Design by Exia CESI Orleans | <a href="legal_notices.html">Legal Notices</a></p>
 					</div>
-		</div>
+				</div>
 </body>
 </html>

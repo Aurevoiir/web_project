@@ -122,7 +122,7 @@ include_once 'controller/shop_controller.php';
 
 							<div class="clearfix"> </div>  </br>
 							
-							<nav class="test" >
+							
 
 							<?php 
 
@@ -130,14 +130,14 @@ include_once 'controller/shop_controller.php';
 
 							if($admin == '1'){
 
-									echo '<button class="add_to_cart" id="add_to_cart" onClick="location.href=\'controller/add_form.php\'">Add a Product</button></br>';
+									echo '<nav class="test" style="text-align: center;" ><button class="add_to_cart" id="add_to_cart" onClick="location.href=\'controller/add_form.php\'">Add a Product</button></nav></br>';
 
 							}
 
 
 							?>
 
-							</nav>
+							
 							
 							
 						</div>
